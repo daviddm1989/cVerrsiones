@@ -14,6 +14,7 @@ package almacen;
 public class principal {
     
     /**
+     * Metodo para buscar un producto del almacen
      * @param args the command line arguments
      */
     private static void buscarProducto(BufferedReader x, Almacen a1) throws NumberFormatException, IOException {
@@ -26,15 +27,19 @@ public class principal {
             a1.buscarProductoPorId();
         }
     }
-    
-     private static void listadoOpciones(BufferedReader x, Almacen a1) throws IOException, NumberFormatException {
+    /**
+     * Metodo pra dar al usuario las opciones a realizar
+     * @param x opcion
+     * @param a1 Almacen
+     * @throws IOException
+     * @throws NumberFormatException 
+     */
+     private static void listadoOpciones(BufferedReader x, Almacen a1) throws IOException, NumberFormatException, InterruptedException {
         System.out.println("Pulsa 1 para ver los productos ordenados por nombre");
         System.out.println("Pulsa 2 para ver la lista ordenada por Id");
         System.out.println("Pulsa 3 para ver los 3 poductos más vendidos y menos vendidos ");
-        System.out.println("Pulsa 4 para ver el total media por venta");
-        System.out.println("Pulsa 5 para ver el cliente que más compra y su número de ventas");
-        System.out.println("Pulsa 6 para ver las compras de un cliente especifico ");
-        System.out.println("Pulsa 7 para no realizar ninguna acción y volver al menú");
+        System.out.println("Pulsa 4 para no realizar ninguna acción y volver al menú");
+        
         int j=Integer.parseInt(x.readLine());
         switch(j){
             case 1:
@@ -56,16 +61,9 @@ public class principal {
                 a1.ordenarAlmacenPorCodigo();
                 break;
             case 4:
-                
+                menu();
                 break;
-            case 5:
-                
-                break;
-            case 6:
-                
-                break;
-            case 7:
-                break;
+            
         }
     }
     

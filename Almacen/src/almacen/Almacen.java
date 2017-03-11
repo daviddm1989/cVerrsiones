@@ -67,6 +67,9 @@ public final class Almacen {
              }
          }
      }
+     /**
+      * Metodo que ordena los productos por mas vendidos
+      */
       public void ordenarPorMasVendidos(){
          for (int i = 0; i < lista.length; i++) {
              for (int j =lista.length-1; j>i; j--) {
@@ -78,6 +81,9 @@ public final class Almacen {
              }
          }
      }
+      /**
+       * Metodo que ordena los productos por menos vendidos
+       */
       public void ordenarPorMenossVendidos(){
          for (int i = 0; i < lista.length; i++) {
              for (int j =lista.length-1; j>i; j--) {
@@ -101,6 +107,9 @@ public final class Almacen {
         }
 
      }
+     /**
+      * Metodo que busca un producto por su identificador
+      */
     public void buscarProductoPorId(){
         System.out.println("Introduce el codigo del producto que buscas");
         float cod=x.nextFloat();
@@ -156,6 +165,9 @@ public final class Almacen {
                 }
             }    
         }
+        /**
+         * Metodo que muestra la facturacion por tres productos
+         */
          public void mostrarTresProductosAlmacen(){
             float total=0;
             for (int i = 0; i < 3; i++) {
@@ -192,10 +204,18 @@ public final class Almacen {
                  }
              }
          }
+         /**
+          * Metodo que selecciona un cliente al azar
+          * @return cliente seleccionado
+          */
          public int azarCliente(){
              int azCliente=(int) (Math.random()*listaClientes.length);
              return azCliente;
          }
+         /**
+          * Metodo que genera la cantidad de ventas de un producto
+          * @return cantidad
+          */
         public int  generarCantidadVentas(){
             int cant=0;
             float probabilidad=(float)(Math.random()*100);
@@ -208,10 +228,17 @@ public final class Almacen {
             }
         return cant;
         }
+        /**
+         * Metodo que selecciona al azar un producto de la lista
+         * @return numero de producto de la lista
+         */
         public int azarProductoVentas(){
             int numProducto=(int)(Math.random()*lista.length);
             return numProducto;
         }
+        /**
+         * Metodo que simmula la venta de un producto a un cliente
+         */
         public void realizarVentas(){
            int numProducto=azarProductoVentas();
            int cant=generarCantidadVentas();
@@ -229,11 +256,19 @@ public final class Almacen {
             System.out.println("Cliente: "+ventas[ventas.length-1].getIdCliente()+"\t |Nº Producto: "+ventas[ventas.length-1].getCodProducto()+"\t | Cantidad: "+ventas[ventas.length-1].getCantidad());
             
         }
+        /**
+         * Metodo que inicia las ventas
+         * @return Productos vendidos
+         */
         public Venta[] iniciarVentas(){
             Venta [] ventas=new Venta[1];
             
             return ventas;
         }
+        /**
+         * Metodo que devuelve las evntas
+         * @return ventas
+         */
         public Venta[] tablaVentas(){
                 Venta[] aux=new Venta[ventas.length+1];
                 for (int i = 0; i < ventas.length; i++) {
@@ -244,6 +279,9 @@ public final class Almacen {
             
             return ventas;
         }
+        /**
+         * Metodo que muestra las ventas
+         */
         public void mostrarTablaVentas(){
             for (int i = 0; i < ventas.length; i++) {
                 if(ventas[i]!=null)

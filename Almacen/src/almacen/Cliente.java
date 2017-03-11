@@ -56,7 +56,7 @@ public Cliente(int i){
      * Metodo que se encarga de generar una direccion aleatorio dependiendo de i (numero aleatorio)
 	 * @return la direccion obtenido para asignarlo a su cliente
      */
-    private String generarDireccion(){
+    String generarDireccion(){
         int i=(int) (Math.random()*5+1);
         switch(i){
             case 1:nombre="C/San Gregorio Nº 98";
@@ -82,7 +82,7 @@ public Cliente(int i){
      * @param i, @see Almacen como crear cliente
      * @return la id correspondiente al cliente
      */
-    private int generarId(int i){
+    int generarId(int i){
         this.id=i+1;
         return id;
     }
