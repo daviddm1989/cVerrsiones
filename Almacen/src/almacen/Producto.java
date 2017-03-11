@@ -66,31 +66,66 @@ public class Producto {
     public int getNumVentas(){
         return nVentas;
     }
-    
+    /**
+     * Modifica el codigo del producto
+     * @param codigo 
+     */
     public void setCodigo(float codigo){
         this.codigo=codigo;
     }
+    /**
+     * Devuelve el codigo del producto
+     * @return codigo del producto
+     */
     public float getCodigo(){
         return codigo;
     }
+    /**
+     * Modifica el nombre del producto
+     * @param nombre 
+     */
     public void setNombre(String nombre){
         this.nombre=nombre;  
     }
+    /**
+     * Devuelve el nombre del producto
+     * @return nombre del producto
+     */
     public String getNombre(){
         return nombre;
     }
+    /**
+     * Modifica el precio del producto
+     * @param precio 
+     */
     public void setPrecio(float precio){
         this.precio=precio;
     }
+    /**
+     * Devuelve el precio del producto
+     * @return precio del producto
+     */
     public float getPrecio(){
         return precio;
     }
+    /**
+     * Modifica la cantidad inicial del producto
+     * @param cantidadInicial 
+     */
     public void setCantInicial(int cantidadInicial){
         this.cantidadInicial=cantidadInicial;
     }
+    /**
+     * Devuelve la cantidad inicial del producto
+     * @return cantidad inicial del producto
+     */
    public int getCantInicial(){
        return cantidadInicial;
    }
+   /**
+    * Modifica el numero de ventas del producto
+    * @param nVentas 
+    */
    public void setNumVentas(int nVentas){
        this.nVentas=nVentas;
    }
